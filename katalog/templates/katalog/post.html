@@ -1,0 +1,8 @@
+{% extends 'katalog/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>{{ title }}</h1>
+<img src="{{ post.image.url }}" height="100"><br>
+{{ post.title }}<br>
+{{ post.description }}
+{% endblock %}

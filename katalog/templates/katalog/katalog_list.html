@@ -1,0 +1,20 @@
+{% extends 'katalog/base.html' %}
+{% block content %}
+  <div class="conteiner text-center"><h1>{{ title }}</h1></div>
+            {% for towars in towar %}
+             <div class="conteiner text-center">
+                <img src="{{ towars.image.url }}" height="100"><br>
+                {{ towars.title }}<br>
+                {{ towars.description|safe|truncatechars:10 }}<br>
+
+                <a href="{{ towars.get_absolute_url }}">
+                    Перейти
+                </a>
+
+        <br>
+        <br>
+             </div>
+             </div>
+    {% endfor %}
+
+{% endblock %}

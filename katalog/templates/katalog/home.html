@@ -1,0 +1,12 @@
+{% extends 'katalog/base.html' %}
+{% block content %}
+    <h1>{{ title }}</h1>
+{% for t in towar %}
+    <div><p>{{ t.title }}</p>
+    <img src="{{ t.image.url  }}" height="200">
+    <a href="{% url 'post' t.pk %}">
+            Перейти
+        </a></div>
+{% endfor %}
+
+{% endblock content %}
